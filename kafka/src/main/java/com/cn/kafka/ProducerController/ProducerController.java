@@ -13,7 +13,6 @@ public class ProducerController {
     @Autowired
     private KafkaTemplate kafkaTemplate;
 
-
     @GetMapping("/send")
     public void send(String topic, String json){
         kafkaTemplate.send(topic, json); //使用kafka模板发送信息
